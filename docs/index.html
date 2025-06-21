@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本地身份证 OCR 识别神器</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    body {
+      background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #d0d0d0;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      border-color: #00c6ff;
+    }
+    .card h2 {
+      color: #00c6ff;
+      margin-bottom: 1rem;
+    }
+    .card p {
+      color: #cfcfcf;
+    }
+    .cta {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .cta a {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: #fff;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+    }
+    .demo-section {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    .demo-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #00c6ff;
+    }
+    .demo-video {
+      max-width: 90%;
+      border-radius: 1rem;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
+    }
+    .qrcode {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+    }
+    .qrcode img {
+      width: 160px;
+      height: 160px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+    .qrcode p {
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>本地身份证 OCR 识别神器</h1>
+    <p>极速、精准、离线识别，无惧隐私风险！</p>
+  </header>
+
+  <section class="features">
+    <div class="card">
+      <h2>📸 离线识别</h2>
+      <p>无需联网，全部识别流程在设备本地完成，隐私信息绝不上传。</p>
+    </div>
+    <div class="card">
+      <h2>⚡ 极速响应</h2>
+      <p>毫秒级识别速度，秒读身份证，媲美工业级识别体验。</p>
+    </div>
+    <div class="card">
+      <h2>📦 易于集成</h2>
+      <p>支持 Android 终端， 提供aar包; 快速集成至您的业务系统。</p>
+    </div>
+    <div class="card">
+      <h2>🧠 智能结构化</h2>
+      <p>智能提取姓名、性别、民族、出生日期、地址、身份证号等字段。</p>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h2>🎬 动态演示：本地 OCR 身份证识别过程</h2>
+    <video class="demo-video" autoplay muted loop>
+      <source src="ocr-demo.mp4" type="video/mp4">
+      您的浏览器不支持 HTML5 视频播放。
+    </video>
+  </section>
+
+  <section class="qrcode">
+    <div>
+      <img src="wechat-qr.png" alt="邮箱二维码">
+      <p>扫码申请集成使用</p>
+    </div>
+    <div>
+      <img src="sdk-qr.png" alt="SDK下载二维码">
+      <p>手机扫码体验识别效果</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <a href="./localocr.apk">立即体验</a>
+  </section>
+
+  <footer>
+    本服务由 <strong>ClientPower OCR</strong> 提供 · © 2025 All rights reserved.
+  </footer>
+</body>
+</html>

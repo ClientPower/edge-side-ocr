@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraActivity">
+
+    <!-- CameraX 预览 -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingBottom="10dp"
+            android:text="请将身份证放置在框内"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 中间身份证框（1.585:1） -->
+            <View
+                android:id="@+id/idCardFrame"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/shape_rectangle_border"
+                app:layout_constraintDimensionRatio="1.585:1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="32dp"
+                android:src="@drawable/bd_ocr_id_card_locator_front"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <!-- 拍照按钮 -->
+    <Button
+        android:id="@+id/btnCapture"
+        android:text="拍照"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="32dp" />
+</FrameLayout>
